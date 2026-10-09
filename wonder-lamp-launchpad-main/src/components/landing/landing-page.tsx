@@ -445,7 +445,7 @@ benefitsButtonText: "Start Your Learning Journey",
 
 const API_URL =
 
-   process.env.API_URL || "http://localhost:5000";
+   process.env.API_URL || "http://localhost:5000" || "https://wonder-lampe-deploy.onrender.com";
 
 
 

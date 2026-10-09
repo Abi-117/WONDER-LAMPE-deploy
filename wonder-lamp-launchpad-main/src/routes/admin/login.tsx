@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 
-const API_URL =  process.env.API_URL || "http://localhost:5000";
+const API_URL =  process.env.API_URL || "http://localhost:5000" || "https://wonder-lampe-deploy.onrender.com" ;
 
 export const Route = createFileRoute("/admin/login")({
   component: AdminLogin,
