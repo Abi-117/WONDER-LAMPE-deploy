@@ -442,10 +442,11 @@ benefitsButtonText: "Start Your Learning Journey",
 };
 
 
-
 const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://wonder-lampe-deploy.onrender.com";
 
-   process.env.API_URL || "http://localhost:5000" || "https://wonder-lampe-deploy.onrender.com";
+
 
 
 

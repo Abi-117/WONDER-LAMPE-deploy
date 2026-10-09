@@ -2,8 +2,10 @@
 import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 
+
 const API_URL =
-   process.env.API_URL || "http://localhost:5000" || "https://wonder-lampe-deploy.onrender.com";
+  process.env.API_URL ||
+  "https://wonder-lampe-deploy.onrender.com";
 
 export const registrationSchema = z.object({
   fullName: z.string().trim().min(2, "Enter your full name.").max(100),
