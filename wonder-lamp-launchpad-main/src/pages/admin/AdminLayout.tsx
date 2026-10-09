@@ -46,11 +46,11 @@ export default function AdminLayout() {
       icon: CreditCard,
       to: "/admin/payments",
     },
-    {
-      label: "Orders",
-      icon: ShoppingCart,
-      to: "/admin/orders",
-    },
+    // {
+    //   label: "Orders",
+    //   icon: ShoppingCart,
+    //   to: "/admin/orders",
+    // },
     {
   label: "Settings",
   icon: Settings,
