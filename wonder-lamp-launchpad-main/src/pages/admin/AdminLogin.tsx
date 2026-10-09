@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:5000";
+const API_URL =  process.env.API_URL || "http://localhost:5000";
 
 export default function AdminLogin() {
   const navigate = useNavigate();

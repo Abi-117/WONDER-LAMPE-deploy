@@ -11,7 +11,7 @@ import {
   Trash2,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000";
+const API_URL =  process.env.API_URL || "http://localhost:5000";
 
 type Benefit = {
   number: string;

@@ -6,7 +6,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:5000";
+const API_URL =  process.env.API_URL || "http://localhost:5000";
 
 type DashboardData = {
   totalCourses: number;
