@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 
 
 const API_URL =
-   process.env.API_URL || "http://localhost:5000" || "https://wonder-lampe-deploy.onrender.com";
-
+  import.meta.env.VITE_API_URL ||
+  "https://wonder-lampe-deploy.onrender.com";
+  
 type Course = {
   _id: string;
   courseName: string;

@@ -6,8 +6,10 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const API_URL =  process.env.API_URL || "http://localhost:5000" || "https://wonder-lampe-deploy.onrender.com";
-
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://wonder-lampe-deploy.onrender.com";
+  
 type DashboardData = {
   totalCourses: number;
   activeCourses: number;
