@@ -25,7 +25,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://wonderlampedeployfirst.vercel.app",
+    origin: "https://www.wonderlampeacademy.com",
     credentials: true,
   })
 );

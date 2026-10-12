@@ -2792,6 +2792,9 @@ courseModules:
       <p className="mt-3 text-sm text-muted-foreground">
         {siteConfig.office}
       </p>
+      <p className="mt-3 text-sm text-muted-foreground">
+        {siteConfig.branch}
+      </p>
       <a
         className="mt-2 block text-sm font-semibold"
         href={`tel:${siteConfig.phone}`}
