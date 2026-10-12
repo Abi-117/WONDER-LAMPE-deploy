@@ -1,13 +1,11 @@
+
 import express from "express";
 import Student from "../models/Student.js";
 import { adminAuth } from "../middleware/adminAuth.js";
 
-
 const router = express.Router();
 
-
-
-// GET ALL STUDENTS — ADMIN
+// GET ALL STUDENTS — ADMIN ONLY
 router.get("/", adminAuth, async (req, res) => {
   try {
     const students = await Student.find()
@@ -28,6 +26,7 @@ router.get("/", adminAuth, async (req, res) => {
   }
 });
 
+// PUBLIC STUDENT REGISTRATION
 router.post("/", async (req, res) => {
   try {
     const {
@@ -57,12 +56,12 @@ router.post("/", async (req, res) => {
       courseId,
     });
 
-    res.status(201).json({
+    return res.status(201).json({
       success: true,
       student,
     });
   } catch (error) {
-    res.status(400).json({
+    return res.status(400).json({
       success: false,
       message: error.message,
     });

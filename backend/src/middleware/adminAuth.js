@@ -1,3 +1,4 @@
+
 import jwt from "jsonwebtoken";
 
 export function adminAuth(req, res, next) {
@@ -7,18 +8,25 @@ export function adminAuth(req, res, next) {
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       return res.status(401).json({
         success: false,
-        message: "Authentication required",
+        message: "Please login as admin",
       });
     }
 
-    const token = authHeader.split(" ")[1];
+    const token = authHeader.slice(7).trim();
 
-    const decoded = jwt.verify(
-      token,
-      process.env.JWT_SECRET
-    );
+    if (!token || !process.env.JWT_SECRET) {
+      return res.status(401).json({
+        success: false,
+        message: "Authentication failed",
+      });
+    }
 
-    if (decoded.role !== "admin") {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    if (
+      typeof decoded === "string" ||
+      decoded.role !== "admin"
+    ) {
       return res.status(403).json({
         success: false,
         message: "Admin access required",
@@ -27,12 +35,11 @@ export function adminAuth(req, res, next) {
 
     req.admin = decoded;
 
-    next();
-
+    return next();
   } catch (error) {
     return res.status(401).json({
       success: false,
-      message: "Invalid or expired token",
+      message: "Invalid or expired token. Please login again.",
     });
   }
 }
