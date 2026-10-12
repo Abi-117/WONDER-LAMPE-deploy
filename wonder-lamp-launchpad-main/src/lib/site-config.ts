@@ -10,7 +10,7 @@ export const siteConfig = {
   phone: "9615151961",
   email: "",
  office: "Head Office: Chennai",
- branch: "Tiruchengode, Tamil Nadu – 637211",
+ branch: "Branch: Tiruchengode, Tamil Nadu – 637211",
   instagramUrl: "https://www.instagram.com/wonderlampe_academy/?hl=en",
   facebookUrl: "https://www.facebook.com/wonderlampeacademy/",
   whatsappCommunityUrl: "",
