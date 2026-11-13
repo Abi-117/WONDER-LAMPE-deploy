@@ -764,7 +764,7 @@ function MarketDashboard() {
 
     </div>
 
-    <div className="absolute -bottom-5 -left-4 hidden rounded-lg border border-border bg-card p-4 shadow-premium md:block"><p className="text-[10px] font-bold uppercase text-muted-foreground">Learning path</p><p className="mt-1 font-bold">21 guided days</p></div>
+{/*     <div className="absolute -bottom-5 -left-4 hidden rounded-lg border border-border bg-card p-4 shadow-premium md:block"><p className="text-[10px] font-bold uppercase text-muted-foreground">Learning path</p><p className="mt-1 font-bold">21 guided days</p></div> */}
 
   </div>;
 
